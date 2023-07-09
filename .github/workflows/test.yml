@@ -1,0 +1,6 @@
+name: Consumer Test
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Test-remote-action:
+    uses: svidlak/workflow-producter/.github/workflows/github-actions-demo.yml@main
