@@ -1,6 +1,13 @@
 name: Consumer Test
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      nodeEnv:
+        description: 'Nodejs version'     
+        required: true
+        default: '16'
 jobs:
   Test-remote-action:
-    uses: svidlak/workflow-producter/.github/workflows/github-actions-demo.yml@main
+    uses: clarityo/github-workflow-actions/.github/workflows/run-tests.yml@main
+    secrets: inherit
