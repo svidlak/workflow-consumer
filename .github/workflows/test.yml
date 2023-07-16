@@ -12,5 +12,5 @@ jobs:
   Test-remote-action:
     uses: svidlak/workflow-producter/.github/workflows/github-actions-demo.yml@main
     with:
-      node-env: .github/labeler.yml
+      node-env: ${{ inputs.node-env }}
     secrets: inherit
